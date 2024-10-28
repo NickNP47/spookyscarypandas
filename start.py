@@ -13,7 +13,7 @@ warnings.filterwarnings("ignore")
 #df['Evidence Found'] = df['Evidence Found'].str.title()
 
 def plot_weapon_perpetrator(df):
-    df = pd.read_csv('data\Crimes_Dataset.csv')
+    df = pd.read_csv('Crimes_Dataset.csv')
     df.duplicated().sum()
     df = df.drop_duplicates()
     df = df.dropna()
@@ -29,14 +29,14 @@ def plot_weapon_perpetrator(df):
 #The ghost seems to use the knife a bit more than the others, but the distribution is fairly uniform and doesn't provide us with any hints.
 #25% of cases have an unidentified weapon though, maybe we should investigate which monster commits most of the crimes where the weapon is unidentified?
 
-df = pd.read_csv('data\Crimes_Dataset.csv')
+df = pd.read_csv('Crimes_Dataset.csv')
 plot_weapon_perpetrator(df)
 
 #insert code that does this
 
 
 def plot_evidence_monster(df):
-    df = pd.read_csv('data\Crimes_Dataset.csv')
+    df = pd.read_csv('Crimes_Dataset.csv')
     df.duplicated().sum()
     df = df.drop_duplicates()
     df = df.dropna()
@@ -64,14 +64,14 @@ def plot_suspects_sun_allergy(df):
     plt.xticks(rotation=45)  # Rotate x-axis labels for readability if needed
     plt.legend(title='Allergy', labels=['Other', 'sunlight'])
     plt.show()
-df = pd.read_csv('data\Suspects_Dataset.csv')
+df = pd.read_csv('Suspects_Dataset.csv')
 plot_suspects_sun_allergy(df)
 """
 #...yeah, that didn't help at all
 #Okay, let's see who likes killing in the village
 """""
 def plot_suspects_height(df):
-    df = pd.read_csv('data\Suspects_Dataset.csv')
+    df = pd.read_csv('Suspects_Dataset.csv')
     df.duplicated().sum()
     df = df.drop_duplicates()
     df = df.dropna()
